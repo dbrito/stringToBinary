@@ -16,7 +16,7 @@ bs.revert('000100010001000100010001');
 //retornara o string correspondente ao código binário EX: 'adc'
 ```
 
-** *Importante:**
+**Importante:**
 O classe realizar apenas a conversão de bites completos ou seja com 8 dígitos
 
 [por Douglas Santos](http://douglas.com.br)*
