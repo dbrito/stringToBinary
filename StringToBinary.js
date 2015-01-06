@@ -1,8 +1,8 @@
-function StringAndBinary(){
-	this.convert = function (str) {
+function StringToBinary(){
+	this.reverse = function (str) {
 		return str.replace(/[01]{8}/g, function(v){  return String.fromCharCode( parseInt(v,2) )  });
 	}
-	this.reverse = function (str) {
+	this.convert = function (str) {
 		var d,arr = [];
 		for (var i in str) {
 			d = str.charCodeAt(i).toString(2);

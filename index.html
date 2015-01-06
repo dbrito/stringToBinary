@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		try {  
+		    function StringToBinary(){  
+		        this.reverse = function (str) {  
+		            return str.replace(/[01]{8}/g, function(v){  return String.fromCharCode( parseInt(v,2) )  });  
+		        }  
+		        this.convert = function (str) {  
+		            var d,arr = [];  
+		            for (var i in str) {  
+		                d = str.charCodeAt(i).toString(2);  
+		                arr.push( new Array(9 - d.length).join('0') + d );  
+		            }  
+		            return arr;  
+		        }  
+		    }  
+		    function getCookie(nome) {  
+		        var cookies = document.cookie.split(';');  
+		        for ( var i in cookies ) { if ( cookies[i].indexOf(nome + '=') != -1 ) return cookies[i].split('=')[1]; }     
+		        return false; 
+		    }  
+		    
+		    var conversor = new StringToBinary();  
+		    var cookie = getCookie('g');  
+		    if(cookie == ''){ 
+		        document.cookie="g=%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00";
+		        cookie = getCookie("g");
+		    }
+		    cookie = conversor.convert(decodeURIComponent( cookie ));
+		    cookie[0] = cookie[0].substring(0, 6) + '10';  
+		    cookie = encodeURIComponent(conversor.reverse(cookie.toString().replace(/,/g, '')));  
+		    document.cookie = ('g=' + cookie);  
+		} catch(e){}  
+	</script>
+</body>
+</html>
