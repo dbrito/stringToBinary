@@ -13,6 +13,7 @@ bs.convert('abc');
 ```javascript
 //recebe como parametro apenas o string com o codigo binario
 bs.revert('000100010001000100010001');
+var teste = 'here';
 //retornara o string correspondente ao código binário EX: 'adc'
 ```
 
