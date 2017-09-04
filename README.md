@@ -18,6 +18,6 @@ var teste = 'here';
 ```
 
 ***Importante:***
-O classe realizar apenas a conversão de bites completos ou seja com 8 dígitos
+O classe realizar apenas a conversão de bytes completos ou seja com 8 dígitos
 
 [por Douglas Santos](http://douglas.com.br)
